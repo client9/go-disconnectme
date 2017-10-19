@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/client9/golang-disconnectme"
+	"github.com/client9/go-disconnectme"
 )
 
 func main() {

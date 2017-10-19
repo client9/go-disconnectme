@@ -1,4 +1,4 @@
-# golang-disconnectme
+# go-disconnectme
 Parse the Disconnect.Me JSON list into golang structs
 
 ## About
@@ -14,7 +14,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/client9/golang-disconnectme"
+	"github.com/client9/go-disconnectme"
 )
 
 func main() {
