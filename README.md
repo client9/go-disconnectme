@@ -7,6 +7,8 @@ This parses the list of trackers and advertisers from (Disconnect.Me)[https://di
 
 ## Usage
 
+The [example program](example/main.go) will iterate and print over all the entries.   It can be run with `go run example/main.go`
+
 ```go
 package main
 
@@ -22,6 +24,12 @@ func main() {
 	}
 	for category, vendors := range dm {
 		fmt.Printf("Category %q has %d entries\n", category, len(vendors))
+		for _, vendor := range vendors {
+			fmt.Printf("  %s --> %s\n", vendor.Name, vendor.Address)
+			for _, domain := range vendor.Domains {
+				fmt.Printf("      %s\n", domain)
+			}
+		}
 	}
 }
 ```
