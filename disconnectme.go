@@ -72,7 +72,7 @@ type dmDomain map[string]interface{}
 func (d dmDomain) Domains() []string {
 	raw, ok := d[d.Name()].([]interface{})
 	if !ok {
-		panic("WTF")
+		panic("Unable to convert to []string!")
 	}
 	list := make([]string, len(raw))
 	for i, val := range raw {
